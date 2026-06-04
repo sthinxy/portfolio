@@ -35,7 +35,7 @@ O projeto reúne minhas informações pessoais, habilidades, projetos e formas d
 <pre>
 ┌──────────────────────────────────────────────┐
 │              PORTFOLIO_LOADED                │
-│        code, silence and visual memory        │
+│          code, silence and visual            │
 └──────────────────────────────────────────────┘
 </pre>
 
