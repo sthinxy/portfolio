@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR" data-mode="white">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>STHINXY // WHITE SPACE</title>
+
+<meta
+ name="description"
+ content="Portfólio de Sthinxy — Ana Beatriz. Inspirado em OMORI: White Space & Black Space."
+/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=VT323&family=Special+Elite&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- NAME GATE -->
+  <div id="nameGate" class="name-gate">
+    <div class="name-box">
+      <p class="name-label">PLAYER_NAME</p>
+
+
+  <h1 class="name-title">
+    <span id="nameTitleText"></span><span class="typing-caret">█</span>
+  </h1>
+
+  <p class="name-description" id="nameDescription">
+    Digite seu nome para começar.
+  </p>
+
+  <form id="nameForm" class="name-form">
+    <input
+      type="text"
+      id="playerNameInput"
+      placeholder="your name..."
+      maxlength="18"
+      autocomplete="off"
+    />
+
+    <button type="submit">ENTER</button>
+  </form>
+
+  <p class="name-hint">press ENTER to continue</p>
+</div>
+
+  </div>
+
+  <!-- CUSTOM CURSOR -->
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- LOADING SCREEN -->
+
+  <div class="boot" id="boot">
+    <div class="boot-inner">
+      <p class="boot-title glitch" data-text="SOMETHING.EXE">
+        SOMETHING.EXE
+      </p>
+
+
+  <p class="boot-sub">
+    &gt; initializing white space . . .
+  </p>
+
+  <div class="boot-bar">
+    <div class="boot-bar-fill" id="bootFill"></div>
+  </div>
+
+  <p class="boot-pct">
+    <span id="bootPct">0</span>%
+  </p>
+
+  <p class="boot-log" id="bootLog">
+    loading memories...
+  </p>
+</div>
+
+
+  </div>
+
+  <!-- NAV -->
+
+  <header class="nav">
+    <a href="#hero" class="nav-logo">[ STHINXY ]</a>
+
+
+<nav class="nav-links">
+  <a href="#hero">INÍCIO</a>
+  <a href="#sobre">SOBRE</a>
+  <a href="#skills">SKILLS</a>
+  <a href="#projetos">PROJETOS</a>
+  <a href="#contato">CONTATO</a>
+</nav>
+
+<button
+  class="theme-toggle"
+  id="themeToggle"
+  title="Mudar para BLACK SPACE. Pressione T no teclado ou toque aqui no celular."
+>
+  <span class="dot"></span>
+  <span class="theme-label">WHITE</span>
+</button>
+
+
+  </header>
+
+  <!-- HERO -->
+
+  <section id="hero" class="hero">
+    <div class="hero-left">
+      <p class="kicker">// arquivo_001 — white_space.exe</p>
+
+
+  <h1 class="hero-title">
+    <span class="strike">PORTFÓLIO COMUM</span>
+    <span class="accent glitch" data-text="UM ESPAÇO VAZIO QUE EXISTE.">
+      UM ESPAÇO VAZIO QUE EXISTE.
+    </span>
+  </h1>
+
+  <p class="hero-text">
+    Sou <strong>Sthinxy</strong> — Ana Beatriz. Estudo tecnologia,
+    desenvolvo interfaces e construo experiências digitais com lógica,
+    estética e propósito.
+  </p>
+
+  <p class="hero-text small">
+    Bem-vindo(a) ao meu white space. Pressione <kbd>T</kbd> ou toque em
+    <strong>WHITE</strong> para atravessar o espaço.
+  </p>
+
+  <div class="hero-cta">
+    <a href="#projetos" class="btn btn-primary">▶ VER PROJETOS</a>
+    <a href="#sobre" class="btn btn-ghost">SOBRE MIM</a>
+  </div>
+
+  <div class="hero-status">
+    <span class="status-dot"></span>
+    status: <em>acordada</em> &nbsp;//&nbsp; humor:
+    <em id="moodWord">neutro</em>
+  </div>
+</div>
+
+<div class="hero-right">
+  <div class="frame">
+    <span class="corner tl"></span>
+    <span class="corner tr"></span>
+    <span class="corner bl"></span>
+    <span class="corner br"></span>
+
+    <img
+      src="assets/portrait.png"
+      alt="Sthinxy retrato"
+      class="portrait portrait-white"
+    />
+
+    <img
+      src="assets/portrait-dark.png"
+      alt="Sthinxy retrato sombra"
+      class="portrait portrait-dark"
+    />
+
+    <div class="frame-label">
+      CHARACTER_LOADED // 001 // STHINXY
+    </div>
+
+    <div class="scanline"></div>
+  </div>
+
+  <!-- HP/MP RPG BAR -->
+  <div class="rpg-stats">
+    <div class="stat">
+      <span>HP</span>
+      <div class="bar">
+        <div class="fill hp"></div>
+      </div>
+      <span>87/100</span>
+    </div>
+
+    <div class="stat">
+      <span>MP</span>
+      <div class="bar">
+        <div class="fill mp"></div>
+      </div>
+      <span>42/60</span>
+    </div>
+
+    <div class="stat">
+      <span>XP</span>
+      <div class="bar">
+        <div class="fill xp"></div>
+      </div>
+      <span>LV. 19</span>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <!-- DIALOG BOX -->
+
+  <div class="dialog" id="dialog">
+    <p class="dialog-name">▼ SOMETHING</p>
+    <p class="dialog-text" id="dialogText"></p>
+    <p class="dialog-next">▸ aperte [espaço]</p>
+  </div>
+
+  <!-- SOBRE -->
+
+  <section id="sobre" class="section">
+    <p class="section-tag">// 002 — sobre</p>
+
+<h2 class="section-title">
+  QUEM HABITA ESTE ESPAÇO?
+</h2>
+
+<div class="about-grid">
+  <div class="about-card">
+    <p class="about-h">NOME</p>
+    <p>Ana Beatriz <span class="muted">(Sthinxy)</span></p>
+  </div>
+
+  <div class="about-card">
+    <p class="about-h">CLASSE</p>
+    <p>Designer & Dev</p>
+  </div>
+
+  <div class="about-card">
+    <p class="about-h">ELEMENTO</p>
+    <p>Monocromático</p>
+  </div>
+
+  <div class="about-card">
+    <p class="about-h">STATUS</p>
+    <p>Em desenvolvimento</p>
+  </div>
+</div>
+
+<p class="about-text">
+  Crio sites, ilustrações e pequenos jogos com foco em atmosfera,
+  identidade visual e sensibilidade estética. Tenho interesse por
+  interfaces que transmitam presença e memória — inspiradas por obras como
+  <strong>OMORI</strong>, <strong>Yume Nikki</strong>,
+  <strong>LISA: The Painful</strong> e cadernos antigos.
+</p>
+
+
+  </section>
+
+  <!-- SKILLS -->
+
+  <section id="skills" class="section">
+    <p class="section-tag">// 003 — habilidades</p>
+
+
+<h2 class="section-title">
+  INVENTÁRIO
+</h2>
+
+<div class="skills-grid">
+  <div class="skill">
+    <div class="skill-head">
+      <span>HTML & CSS</span>
+      <span class="lv">Lv.MAX</span>
+    </div>
+
+    <div class="bar">
+      <div class="fill" style="--p: 98%"></div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <div class="skill-head">
+      <span>JAVASCRIPT</span>
+      <span class="lv">Lv.18</span>
+    </div>
+
+    <div class="bar">
+      <div class="fill" style="--p: 85%"></div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <div class="skill-head">
+      <span>JAVA</span>
+      <span class="lv">Lv.12</span>
+    </div>
+
+    <div class="bar">
+      <div class="fill" style="--p: 62%"></div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <div class="skill-head">
+      <span>SQL</span>
+      <span class="lv">Lv.10</span>
+    </div>
+
+    <div class="bar">
+      <div class="fill" style="--p: 55%"></div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <div class="skill-head">
+      <span>DESIGN / FIGMA</span>
+      <span class="lv">Lv.16</span>
+    </div>
+
+    <div class="bar">
+      <div class="fill" style="--p: 80%"></div>
+    </div>
+  </div>
+
+  <div class="skill">
+    <div class="skill-head">
+      <span>DORMIR CEDO</span>
+      <span class="lv">Lv.02</span>
+    </div>
+
+    <div class="bar">
+      <div class="fill" style="--p: 12%"></div>
+    </div>
+  </div>
+</div>
+
+
+  </section>
+
+  <!-- PROJETOS -->
+
+  <section id="projetos" class="section">
+    <p class="section-tag">// 004 — projetos</p>
+
+<h2 class="section-title">
+  FRAGMENTOS
+</h2>
+
+<div class="proj-grid">
+  <article class="proj">
+    <div class="proj-thumb" data-art="todo">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <h3>SOMETHING TO DO</h3>
+
+    <p>
+      Task manager minimalista em white space. LocalStorage, filtros e prioridades.
+    </p>
+
+    <p class="proj-tags">HTML · CSS · JS</p>
+
+    <div class="proj-links">
+      <a
+        href="https://sthinxy.github.io/something-to-do/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        VER SITE
+      </a>
+
+      <a
+        href="https://github.com/sthinxy/something-to-do"
+        target="_blank"
+        rel="noreferrer"
+      >
+        REPOSITÓRIO
+      </a>
+    </div>
+  </article>
+
+  <article class="proj">
+    <div class="proj-thumb" data-art="diary">
+      <span></span>
+      <span></span>
+    </div>
+
+    <h3>DIÁRIO DO VAZIO</h3>
+
+    <p>
+      Pequeno diário digital com entradas datadas e tema noturno automático.
+    </p>
+
+    <p class="proj-tags">JS · LOCALSTORAGE</p>
+  </article>
+
+  <article class="proj">
+    <div class="proj-thumb" data-art="rpg">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <h3>MICRO RPG</h3>
+
+    <p>
+      Mini RPG textual no navegador. Combate por turnos, sprite ASCII e save manual.
+    </p>
+
+    <p class="proj-tags">JS VANILLA</p>
+  </article>
+
+  <article class="proj">
+    <div class="proj-thumb" data-art="port">
+      <span></span>
+    </div>
+
+    <h3>ESTE PORTFÓLIO</h3>
+
+    <p>
+      Site autoral, sem frameworks. Duas almas: WHITE SPACE & BLACK SPACE.
+    </p>
+
+    <p class="proj-tags">HTML · CSS · JS</p>
+
+    <div class="proj-links">
+      <a
+        href="https://sthinxy.github.io/portfolio/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        VER SITE
+      </a>
+
+      <a
+        href="https://github.com/sthinxy/portfolio"
+        target="_blank"
+        rel="noreferrer"
+      >
+        REPOSITÓRIO
+      </a>
+    </div>
+  </article>
+
+  <article class="proj">
+    <div class="proj-thumb" data-art="cafe">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <h3>NOIR CAFÉ</h3>
+
+    <p>
+      Cardápio digital interativo com filtros, carrinho funcional, quiz,
+      login fictício e pedido via WhatsApp.
+    </p>
+
+    <p class="proj-tags">HTML · CSS · JS · LOCALSTORAGE</p>
+
+    <div class="proj-links">
+      <a
+        href="https://sthinxy.github.io/noircafe/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        VER SITE
+      </a>
+
+      <a
+        href="https://github.com/sthinxy/noircafe"
+        target="_blank"
+        rel="noreferrer"
+      >
+        REPOSITÓRIO
+      </a>
+    </div>
+  </article>
+</div>
+
+
+  </section>
+
+  <!-- CONTATO -->
+
+  <section id="contato" class="section">
+    <p class="section-tag">// 005 — contato</p>
+
+
+<h2 class="section-title">
+  FALE COMIGO
+</h2>
+
+<p class="about-text center">
+  Se quiser conversar, colaborar, ou só dizer oi —
+</p>
+
+<div class="contact-grid">
+  <a class="contact-card" href="mailto:venanciobeatriz620@gmail.com">
+    ✉ E-MAIL
+  </a>
+
+  <a
+    class="contact-card"
+    href="https://wa.me/557196356879?text=Oi%2C%20vim%20pelo%20seu%20portfolio."
+    target="_blank"
+    rel="noreferrer"
+  >
+    ☎ WHATSAPP
+  </a>
+
+  <a
+    class="contact-card"
+    href="https://github.com/sthinxy"
+    target="_blank"
+    rel="noreferrer"
+  >
+    ▣ GITHUB
+  </a>
+
+  <a
+    class="contact-card"
+    href="https://www.instagram.com/noirdescent/"
+    target="_blank"
+    rel="noreferrer"
+  >
+    ◉ INSTAGRAM
+  </a>
+
+  <a
+    class="contact-card"
+    href="https://discord.com/users/832411401649258497"
+    target="_blank"
+    rel="noreferrer"
+  >
+    ◈ DISCORD
+  </a>
+</div>
+
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer class="foot">
+    <p>END_OF_FILE //</p>
+    <p>desenvolvido por <strong>sthinxy</strong> — 2026</p>
+    <p class="muted">
+      pressione <kbd>T</kbd> para alternar entre white_space ↔ black_space
+    </p>
+    <p class="muted">
+      no celular, toque em WHITE.
+    </p>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>
