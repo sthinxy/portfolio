@@ -1,22 +1,75 @@
-
 /* STHINXY :: white/black space */
-(() => {
-  const $ = (s) => document.querySelector(s);
+(function () {
+  const $ = function (selector) {
+    return document.querySelector(selector);
+  };
+
+  /* ===== TYPEWRITER HELPER ===== */
+  function typeText(element, text, speed, callback) {
+    if (!element) return;
+
+    element.textContent = '';
+
+    let index = 0;
+
+    const typing = setInterval(function () {
+      element.textContent += text.charAt(index);
+      index++;
+
+      if (index >= text.length) {
+        clearInterval(typing);
+
+        if (callback) {
+          callback();
+        }
+      }
+    }, speed);
+  }
 
   /* ===== PLAYER NAME / NAME GATE ===== */
   const nameGate = $('#nameGate');
+  const nameBox = document.querySelector('.name-box');
   const nameForm = $('#nameForm');
   const playerNameInput = $('#playerNameInput');
+  const nameTitleText = $('#nameTitleText');
 
   let playerName = '';
+  let nameGateReady = false;
 
   if (playerNameInput) {
     playerNameInput.value = '';
+    playerNameInput.disabled = true;
   }
 
+  if (nameBox) {
+    nameBox.classList.add('is-typing');
+  }
+
+  typeText(nameTitleText, 'ANTES DE ENTRAR NO WHITE SPACE...', 55, function () {
+    nameGateReady = true;
+
+    if (nameBox) {
+      nameBox.classList.remove('is-typing');
+      nameBox.classList.add('is-ready');
+    }
+
+    const title = document.querySelector('.name-title');
+
+    if (title) {
+      title.classList.add('done');
+    }
+
+    if (playerNameInput) {
+      playerNameInput.disabled = false;
+      playerNameInput.focus();
+    }
+  });
+
   if (nameForm && playerNameInput) {
-    nameForm.addEventListener('submit', (event) => {
+    nameForm.addEventListener('submit', function (event) {
       event.preventDefault();
+
+      if (!nameGateReady) return;
 
       const typedName = playerNameInput.value.trim();
 
@@ -30,7 +83,7 @@
       if (nameGate) {
         nameGate.classList.add('hidden');
 
-        setTimeout(() => {
+        setTimeout(function () {
           nameGate.style.display = 'none';
           startBoot();
         }, 500);
@@ -67,7 +120,7 @@
     pct.textContent = '0';
     log.textContent = 'loading memories...';
 
-    const tick = setInterval(() => {
+    const tick = setInterval(function () {
       p += Math.random() * 8 + 2;
 
       if (p >= 100) {
@@ -78,14 +131,15 @@
       pct.textContent = Math.floor(p);
 
       if (Math.random() < 0.35) {
-        log.textContent = logs[li++ % logs.length];
+        log.textContent = logs[li % logs.length];
+        li++;
       }
 
       if (p >= 100) {
         clearInterval(tick);
-        log.textContent = `welcome, ${finalName}.`;
+        log.textContent = 'welcome, ' + finalName + '.';
 
-        setTimeout(() => {
+        setTimeout(function () {
           boot.classList.add('done');
         }, 600);
       }
@@ -101,7 +155,7 @@
   const dText = $('#dialogText');
   let typing = null;
 
-  const showDialog = (text) => {
+  function showDialog(text) {
     if (!dialog || !dText) return;
 
     dialog.classList.add('show');
@@ -114,8 +168,9 @@
 
     let i = 0;
 
-    typing = setInterval(() => {
-      dText.textContent += text[i++] || '';
+    typing = setInterval(function () {
+      dText.textContent += text.charAt(i);
+      i++;
 
       if (i >= text.length) {
         clearInterval(typing);
@@ -123,45 +178,47 @@
       }
     }, 28);
 
-    clearTimeout(showDialog._t);
+    clearTimeout(showDialog.timer);
 
-    showDialog._t = setTimeout(() => {
+    showDialog.timer = setTimeout(function () {
       dialog.classList.remove('show');
     }, 6000);
-  };
+  }
 
   /* ===== THEME TOGGLE ===== */
   const html = document.documentElement;
-  const tg = $('#themeToggle');
+  const themeToggle = $('#themeToggle');
 
-  const setMode = (mode) => {
+  function setMode(mode) {
     html.setAttribute('data-mode', mode);
 
-    if (tg) {
-      const label = tg.querySelector('.theme-label');
+    if (themeToggle) {
+      const label = themeToggle.querySelector('.theme-label');
 
       if (label) {
         label.textContent = mode.toUpperCase();
       }
     }
 
-    showDialog(
-      mode === 'black'
-        ? 'você entrou no BLACK SPACE. cuidado com o que se move.'
-        : 'voltando ao WHITE SPACE. tudo está em silêncio.'
-    );
-  };
+    if (mode === 'black') {
+      showDialog('você entrou no BLACK SPACE. cuidado com o que se move.');
+    } else {
+      showDialog('voltando ao WHITE SPACE. tudo está em silêncio.');
+    }
+  }
 
-  if (tg) {
-    tg.addEventListener('click', () => {
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
       const currentMode = html.getAttribute('data-mode');
-      setMode(currentMode === 'white' ? 'black' : 'white');
+      const nextMode = currentMode === 'white' ? 'black' : 'white';
+
+      setMode(nextMode);
     });
   }
 
-  document.addEventListener('keydown', (event) => {
-    if (event.key.toLowerCase() === 't' && tg) {
-      tg.click();
+  document.addEventListener('keydown', function (event) {
+    if (event.key.toLowerCase() === 't' && themeToggle) {
+      themeToggle.click();
     }
 
     if (event.code === 'Space' && dialog && dialog.classList.contains('show')) {
@@ -170,64 +227,69 @@
   });
 
   /* ===== FIRST HELLO ===== */
-  setTimeout(() => {
-    showDialog(
-      'olá. este é o WHITE SPACE. pressione [ T ] ou toque em WHITE para atravessar o espaço.'
-    );
+  setTimeout(function () {
+    showDialog('olá. este é o WHITE SPACE. pressione [ T ] ou toque em WHITE para atravessar o espaço.');
   }, 3200);
 
   /* ===== CURSOR ===== */
-  const cur = $('#cursor');
-  const trail = $('#cursorTrail');
+  const cursor = $('#cursor');
+  const cursorTrail = $('#cursorTrail');
 
-  if (cur && trail) {
+  if (cursor && cursorTrail) {
     let tx = 0;
     let ty = 0;
     let cx = 0;
     let cy = 0;
 
-    document.addEventListener('mousemove', (event) => {
-      cur.style.left = event.clientX + 'px';
-      cur.style.top = event.clientY + 'px';
+    document.addEventListener('mousemove', function (event) {
+      cursor.style.left = event.clientX + 'px';
+      cursor.style.top = event.clientY + 'px';
 
       tx = event.clientX;
       ty = event.clientY;
     });
 
-    function loop() {
+    function cursorLoop() {
       cx += (tx - cx) * 0.15;
       cy += (ty - cy) * 0.15;
 
-      trail.style.left = cx + 'px';
-      trail.style.top = cy + 'px';
+      cursorTrail.style.left = cx + 'px';
+      cursorTrail.style.top = cy + 'px';
 
-      requestAnimationFrame(loop);
+      requestAnimationFrame(cursorLoop);
     }
 
-    loop();
+    cursorLoop();
 
-    document.querySelectorAll('a, button, .proj, .btn, .contact-card').forEach((element) => {
-      element.addEventListener('mouseenter', () => {
-        cur.classList.add('hover');
-      });
+    document
+      .querySelectorAll('a, button, .proj, .btn, .contact-card, .proj-links a')
+      .forEach(function (element) {
+        element.addEventListener('mouseenter', function () {
+          cursor.classList.add('hover');
+        });
 
-      element.addEventListener('mouseleave', () => {
-        cur.classList.remove('hover');
+        element.addEventListener('mouseleave', function () {
+          cursor.classList.remove('hover');
+        });
       });
-    });
   }
 
   /* ===== SCROLL REVEAL ===== */
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in');
-      }
-    });
-  }, { threshold: 0.12 });
+  const observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+        }
+      });
+    },
+    {
+      threshold: 0.12
+    }
+  );
 
-  document.querySelectorAll('.section').forEach((section) => {
-    io.observe(section);
+  document.querySelectorAll('.section').forEach(function (section) {
+    observer.observe(section);
   });
 
   /* ===== MOOD RANDOM ===== */
@@ -243,15 +305,16 @@
 
   const moodEl = $('#moodWord');
 
-  setInterval(() => {
+  setInterval(function () {
     if (moodEl) {
-      moodEl.textContent = moods[Math.floor(Math.random() * moods.length)];
+      const randomMood = moods[Math.floor(Math.random() * moods.length)];
+      moodEl.textContent = randomMood;
     }
   }, 3500);
 
-  /* ===== SMOOTH ANCHOR + EASTER NAV DIALOG ===== */
-  document.querySelectorAll('.nav-links a').forEach((link) => {
-    link.addEventListener('click', () => {
+  /* ===== NAV DIALOG ===== */
+  document.querySelectorAll('.nav-links a').forEach(function (link) {
+    link.addEventListener('click', function () {
       const map = {
         '#sobre': 'abrindo página sobre... [ok]',
         '#skills': 'inventário carregado.',
@@ -260,10 +323,45 @@
         '#hero': 'voltando para o início.'
       };
 
-      const text = map[link.getAttribute('href')];
+      const href = link.getAttribute('href');
+      const text = map[href];
 
       if (text) {
         showDialog(text);
+      }
+    });
+  });
+
+  /* ===== PROJECT LINK DIALOGS ===== */
+  document.querySelectorAll('.proj-links a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      const text = link.textContent.trim().toLowerCase();
+
+      if (text.includes('site')) {
+        showDialog('abrindo projeto publicado...');
+      }
+
+      if (text.includes('repositório')) {
+        showDialog('abrindo repositório no GitHub...');
+      }
+    });
+  });
+
+  /* ===== CONTACT LINK DIALOGS ===== */
+  document.querySelectorAll('.contact-card').forEach(function (link) {
+    link.addEventListener('click', function () {
+      const text = link.textContent.trim().toLowerCase();
+
+      if (text.includes('whatsapp')) {
+        showDialog('abrindo canal no WhatsApp...');
+      } else if (text.includes('email')) {
+        showDialog('preparando mensagem de e-mail...');
+      } else if (text.includes('github')) {
+        showDialog('abrindo GitHub...');
+      } else if (text.includes('instagram')) {
+        showDialog('abrindo Instagram...');
+      } else if (text.includes('discord')) {
+        showDialog('abrindo Discord...');
       }
     });
   });
