@@ -30,15 +30,15 @@
       'hero.cta1':'▶ VER PROJETOS','hero.cta2':'SERVIÇOS','hero.cta3':'CONTATO',
       'hero.status':'status:','hero.statusValue':'disponível para freelas','hero.mood':'humor:','hero.moodValue':'criativa',
       'about.tag':'// 002 — sobre','about.title':'QUEM HABITA ESTE ESPAÇO?',
-      'about.name':'NOME','about.class':'CLASSE','about.classValue':'Web Designer & Front-end Dev','about.element':'ELEMENTO','about.elementValue':'Monocromático','about.status':'STATUS','about.statusValue':'Aceitando projetos',
-      'about.text':'Estudo <strong>Análise e Desenvolvimento de Sistemas</strong> e trabalho com <strong>front-end</strong>, <strong>web design</strong>, <strong>UI/UX</strong> e criação de sites para clientes. Meu diferencial é unir <em>estética autoral</em> com <em>funcionalidade real</em> — sites que vendem, contam uma história e funcionam em qualquer tela.',
-      'about.text2':'Faço sites responsivos, portfólios, landing pages, interfaces e projetos com painel administrativo quando necessário. Inspirações: <strong>OMORI</strong>, <strong>Yume Nikki</strong>, <strong>LISA: The Painful</strong>, cadernos antigos e a estética do <em>white/black space</em>.',
+      'about.name':'NOME','about.class':'CLASSE','about.classValue':'Creative Developer & Visual Designer','about.element':'ELEMENTO','about.elementValue':'White / Black Space','about.status':'STATUS','about.statusValue':'Aceitando projetos premium',
+      'about.text':'Estudo <strong>Análise e Desenvolvimento de Sistemas</strong> e trabalho unindo <strong>web design</strong>, <strong>front-end</strong>, <strong>UI/UX</strong>, <strong>identidade visual</strong> e direção criativa. Meu foco é criar presença digital com personalidade: sites que vendem, contam uma história e funcionam bem em qualquer tela.',
+      'about.text2':'Hoje desenvolvo landing pages, sites institucionais, e-commerces, portfólios, catálogos, dashboards, interfaces com IA/chatbots, identidades visuais, direção criativa e sistemas com painel administrativo quando necessário. Minha estética mistura minimalismo, game UI, pixel art, editorial e o contraste white/black space.',
       'services.tag':'// 003 — serviços','services.title':'ITENS DISPONÍVEIS','services.sub':'Cada serviço é um item do inventário — pronto para ser equipado no seu projeto.',
       'skills.tag':'// 004 — habilidades','skills.title':'INVENTÁRIO TÉCNICO',
       'projects.tag':'// 005 — projetos','projects.title':'FRAGMENTOS SALVOS','projects.sub':'Clique em qualquer card para abrir o arquivo do projeto.',
       'quest.tag':'// 006 — quest log','quest.title':'DIÁRIO DE MISSÕES',
       'save.tag':'// 007 — save file','save.title':'SAVE FILE 01',
-      'save.name':'NOME','save.class':'CLASSE','save.classValue':'Web Designer & Front-end Developer','save.location':'LOCAL','save.language':'IDIOMAS','save.status':'STATUS','save.statusValue':'Disponível para freelas','save.quest':'MISSÃO ATUAL','save.questValue':'Criar experiências digitais memoráveis','save.playtime':'TEMPO DE SESSÃO',
+      'save.name':'NOME','save.class':'CLASSE','save.classValue':'Creative Developer & Visual Designer','save.location':'LOCAL','save.language':'IDIOMAS','save.status':'STATUS','save.statusValue':'Aceitando projetos premium','save.quest':'MISSÃO ATUAL','save.questValue':'Criar marcas e experiências digitais memoráveis','save.playtime':'TEMPO DE SESSÃO',
       'contact.tag':'// 008 — canal aberto','contact.title':'CANAL ABERTO','contact.lead':'Quer criar um site com identidade forte? Vamos conversar.',
       'channel.nameLabel':'Seu nome','channel.emailLabel':'Seu e-mail','channel.messageLabel':'Sua mensagem','channel.name':'seu nome','channel.email':'seu e-mail','channel.message':'sua mensagem...','channel.send':'▶ ENVIAR MENSAGEM','channel.note':'O botão abre seu e-mail com a mensagem pronta para enviar.','channel.sent':'mensagem preparada. seu cliente de e-mail foi aberto.',
       'contact.ctaTitle':'▼ NOVA MISSÃO DESBLOQUEADA','contact.ctaText':'Missão atual: entrar em contato comigo, contar sua ideia e solicitar um orçamento. Eu respondo com direção, escopo e próximos passos.','contact.ctaBtn':'▶ SOLICITAR ORÇAMENTO',
@@ -72,15 +72,15 @@
       'hero.cta1':'▶ VIEW PROJECTS','hero.cta2':'SERVICES','hero.cta3':'CONTACT',
       'hero.status':'status:','hero.statusValue':'available for freelance','hero.mood':'mood:','hero.moodValue':'creative',
       'about.tag':'// 002 — about','about.title':'WHO LIVES IN THIS SPACE?',
-      'about.name':'NAME','about.class':'CLASS','about.classValue':'Web Designer & Front-end Dev','about.element':'ELEMENT','about.elementValue':'Monochrome','about.status':'STATUS','about.statusValue':'Taking new projects',
-      'about.text':"I study <strong>Systems Analysis & Development</strong> and work as a <strong>front-end</strong>, <strong>web designer</strong>, <strong>UI/UX</strong> and freelance site builder. My edge is mixing <em>authorial aesthetics</em> with <em>real functionality</em> — sites that sell, tell a story, and work on every screen.",
-      'about.text2':'I build responsive websites, portfolios, landing pages, interfaces and projects with admin panels when needed. Inspirations: <strong>OMORI</strong>, <strong>Yume Nikki</strong>, <strong>LISA: The Painful</strong>, old notebooks and the <em>white/black space</em> aesthetic.',
+      'about.name':'NAME','about.class':'CLASS','about.classValue':'Creative Developer & Visual Designer','about.element':'ELEMENT','about.elementValue':'White / Black Space','about.status':'STATUS','about.statusValue':'Taking premium projects',
+      'about.text':"I study <strong>Systems Analysis & Development</strong> and work across <strong>web design</strong>, <strong>front-end</strong>, <strong>UI/UX</strong>, <strong>visual identity</strong> and creative direction. My focus is digital presence with personality: websites that sell, tell a story and work beautifully on every screen.",
+      'about.text2':'Today I build landing pages, business websites, e-commerce, portfolios, catalogs, dashboards, AI/chatbot interfaces, visual identities, creative direction and admin-powered systems when needed. My aesthetic mixes minimalism, game UI, pixel art, editorial direction and the white/black space contrast.',
       'services.tag':'// 003 — services','services.title':'AVAILABLE ITEMS','services.sub':'Each service is an inventory item — ready to be equipped on your project.',
       'skills.tag':'// 004 — skills','skills.title':'TECH INVENTORY',
       'projects.tag':'// 005 — projects','projects.title':'SAVED FRAGMENTS','projects.sub':'Click any card to open the project file.',
       'quest.tag':'// 006 — quest log','quest.title':'MISSION LOG',
       'save.tag':'// 007 — save file','save.title':'SAVE FILE 01',
-      'save.name':'NAME','save.class':'CLASS','save.classValue':'Web Designer & Front-end Developer','save.location':'LOCATION','save.language':'LANGUAGES','save.status':'STATUS','save.statusValue':'Available for freelance','save.quest':'CURRENT QUEST','save.questValue':'Creating memorable digital experiences','save.playtime':'PLAYTIME',
+      'save.name':'NAME','save.class':'CLASS','save.classValue':'Creative Developer & Visual Designer','save.location':'LOCATION','save.language':'LANGUAGES','save.status':'STATUS','save.statusValue':'Taking premium projects','save.quest':'CURRENT QUEST','save.questValue':'Creating memorable digital brands and experiences','save.playtime':'PLAYTIME',
       'contact.tag':'// 008 — open channel','contact.title':'OPEN CHANNEL','contact.lead':"Want a website with a strong visual identity? Let's talk.",
       'channel.nameLabel':'Your name','channel.emailLabel':'Your e-mail','channel.messageLabel':'Your message','channel.name':'your name','channel.email':'your e-mail','channel.message':'your message...','channel.send':'▶ SEND MESSAGE','channel.note':'The button opens your e-mail app with the message ready to send.','channel.sent':'message prepared. your e-mail app was opened.',
       'contact.ctaTitle':'▼ NEW QUEST UNLOCKED','contact.ctaText':"Current quest: contact me, tell me your idea and request a quote. I'll reply with direction, scope and next steps.",'contact.ctaBtn':'▶ REQUEST A QUOTE',
@@ -102,9 +102,12 @@
      =========================================================== */
   const DEFAULT_CONTENT = window.STHINXY_DEFAULT_CONTENT || {};
   const services = Array.isArray(DEFAULT_CONTENT.services) ? DEFAULT_CONTENT.services.slice() : [];
+  const defaultServices = Array.isArray(DEFAULT_CONTENT.services) ? DEFAULT_CONTENT.services.slice() : [];
   const skills = Array.isArray(DEFAULT_CONTENT.skills) ? DEFAULT_CONTENT.skills.slice() : [];
   const projectFilters = Array.isArray(DEFAULT_CONTENT.projectFilters) ? DEFAULT_CONTENT.projectFilters.slice() : [];
   const projects = Array.isArray(DEFAULT_CONTENT.projects) ? DEFAULT_CONTENT.projects.slice() : [];
+  const defaultProjects = Array.isArray(DEFAULT_CONTENT.projects) ? DEFAULT_CONTENT.projects.slice() : [];
+  const defaultProjectFilters = Array.isArray(DEFAULT_CONTENT.projectFilters) ? DEFAULT_CONTENT.projectFilters.slice() : [];
   const quests = Array.isArray(DEFAULT_CONTENT.quests) ? DEFAULT_CONTENT.quests.slice() : [];
 
   /* ===========================================================
@@ -141,6 +144,24 @@
     target.splice(0, target.length, ...source);
   }
 
+  function mergeById(defaultItems, sourceItems, fillDefaultLinks){
+    const defaults = Array.isArray(defaultItems) ? defaultItems : [];
+    const source = Array.isArray(sourceItems) ? sourceItems : [];
+    const byId = new Map(source.filter(item => item && item.id).map(item => [item.id, item]));
+    const merged = defaults.map(base => {
+      const item = deepMergeLocal(base, byId.get(base.id) || {});
+      if(fillDefaultLinks){
+        if(base.site && base.site !== '#' && (!item.site || item.site === '#')) item.site = base.site;
+        if(base.repo && base.repo !== '#' && (!item.repo || item.repo === '#')) item.repo = base.repo;
+      }
+      return item;
+    });
+    source.forEach(item => {
+      if(item && item.id && !defaults.some(base => base.id === item.id)) merged.push(item);
+    });
+    return merged;
+  }
+
   function applyCmsDom(){
     if(!cmsContent) return;
     const settings = cmsSettings || {};
@@ -151,7 +172,8 @@
       'email':  '<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg>',
       'behance':'<svg viewBox="0 0 24 24"><path d="M3 6h5a2.5 2.5 0 0 1 0 5H3z"/><path d="M3 11h6a2.5 2.5 0 0 1 0 5H3z"/><path d="M14 8h6"/><path d="M14 14h7a3.5 3.5 0 0 0-7 0v1.5a2.5 2.5 0 0 0 5 0"/></svg>',
       'github': '<svg viewBox="0 0 24 24"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6 0C7.7 2.8 6.6 3.1 6.6 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 5.2 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>',
-      'instagram':'<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.9" fill="currentColor" stroke="none"/></svg>'
+      'instagram':'<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="0.9" fill="currentColor" stroke="none"/></svg>',
+      'discord':'<svg viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M20.32 4.37A19.8 19.8 0 0 0 15.36 2.84a.08.08 0 0 0-.08.04c-.22.38-.45.88-.62 1.28a18.3 18.3 0 0 0-5.49 0 12.7 12.7 0 0 0-.63-1.28.08.08 0 0 0-.08-.04 19.7 19.7 0 0 0-4.95 1.53.07.07 0 0 0-.03.03C.53 8.78-.32 13.06.1 17.29c0 .02.01.04.03.06a20 20 0 0 0 6.07 3.06.08.08 0 0 0 .09-.03c.47-.64.88-1.32 1.24-2.02a.08.08 0 0 0-.04-.1 13.1 13.1 0 0 1-1.88-.9.08.08 0 0 1-.01-.12c.13-.1.26-.19.38-.29a.07.07 0 0 1 .07-.01c3.93 1.79 8.18 1.79 12.06 0a.07.07 0 0 1 .08.01c.12.1.25.2.37.29a.08.08 0 0 1-.01.13 12.3 12.3 0 0 1-1.87.89.08.08 0 0 0-.04.11c.36.7.77 1.36 1.24 2.01a.08.08 0 0 0 .08.03 19.8 19.8 0 0 0 6.08-3.07.08.08 0 0 0 .03-.05c.5-4.89-.84-9.13-3.55-12.89a.06.06 0 0 0-.03-.03zM8.02 14.7c-1.18 0-2.16-1.08-2.16-2.42 0-1.33.96-2.42 2.16-2.42 1.21 0 2.18 1.1 2.16 2.42 0 1.34-.96 2.42-2.16 2.42zm7.98 0c-1.18 0-2.16-1.08-2.16-2.42 0-1.33.96-2.42 2.16-2.42 1.21 0 2.18 1.1 2.16 2.42 0 1.34-.95 2.42-2.16 2.42z"/></svg>'
     };
     const ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>';
     if(contactGrid && Array.isArray(settings.contactCards)){
@@ -194,16 +216,25 @@
       if(!i18n.pt['gate.top'] || i18n.pt['gate.top'] === 'ACCESS POINT // NAME REQUIRED') i18n.pt['gate.top'] = 'PONTO DE ACESSO // NOME OBRIGATORIO';
       if(!i18n.pt['gate.frame'] || i18n.pt['gate.frame'] === '[ NAME_GATE ]') i18n.pt['gate.frame'] = '[ PORTAL_NOME ]';
       if(!i18n.pt['gate.label'] || i18n.pt['gate.label'] === 'PLAYER_NAME') i18n.pt['gate.label'] = 'NOME_DO_JOGADOR';
+      i18n.pt['about.classValue'] = 'Creative Developer & Visual Designer';
+      i18n.pt['about.elementValue'] = 'White / Black Space';
+      i18n.pt['about.statusValue'] = 'Aceitando projetos premium';
+      i18n.pt['about.text'] = 'Estudo <strong>Análise e Desenvolvimento de Sistemas</strong> e trabalho unindo <strong>web design</strong>, <strong>front-end</strong>, <strong>UI/UX</strong>, <strong>identidade visual</strong> e direção criativa. Meu foco é criar presença digital com personalidade: sites que vendem, contam uma história e funcionam bem em qualquer tela.';
+      i18n.pt['about.text2'] = 'Hoje desenvolvo landing pages, sites institucionais, e-commerces, portfólios, catálogos, dashboards, interfaces com IA/chatbots, identidades visuais, direção criativa e sistemas com painel administrativo quando necessário. Minha estética mistura minimalismo, game UI, pixel art, editorial e o contraste white/black space.';
+      i18n.pt['save.classValue'] = 'Creative Developer & Visual Designer';
+      i18n.pt['save.statusValue'] = 'Aceitando projetos premium';
+      i18n.pt['save.questValue'] = 'Criar marcas e experiências digitais memoráveis';
+      i18n.pt['contact.ctaText'] = 'Missão atual: entrar em contato comigo, contar sua ideia e solicitar um orçamento. Eu respondo com direção, escopo e próximos passos.';
       if(!i18n.pt['dialog.preyCaught']) i18n.pt['dialog.preyCaught'] = 'voce pegou a bolinha vermelha. parabens, isso era dificil de verdade.';
       if(!i18n.en['dialog.preyCaught']) i18n.en['dialog.preyCaught'] = 'you caught the red dot. congratulations, that was genuinely hard.';
       // permite que o admin use {name} em vez de função JS
       if(typeof i18n.pt['dialog.welcome'] !== 'function' && !i18n.pt['dialog.welcome']) i18n.pt['dialog.welcome'] = 'Bem-vinda de volta, {name}. O espaço estava te esperando.';
       if(typeof i18n.en['dialog.welcome'] !== 'function' && !i18n.en['dialog.welcome']) i18n.en['dialog.welcome'] = 'Welcome back, {name}. The space was waiting for you.';
     }
-    replaceArray(services, content.services);
+    replaceArray(services, defaultServices);
     replaceArray(skills, content.skills);
-    replaceArray(projectFilters, content.projectFilters);
-    replaceArray(projects, content.projects);
+    replaceArray(projectFilters, mergeById(defaultProjectFilters, content.projectFilters, false));
+    replaceArray(projects, mergeById(defaultProjects, content.projects, true));
     replaceArray(quests, content.quests);
   }
 
@@ -320,24 +351,50 @@
     });
   }
 
+  const FILTER_ALIASES = {
+    brand: ['brand','studio','agency','fashion','identity'],
+    arch: ['arch','architecture','arquitetura'],
+    ecommerce: ['ecommerce','e-commerce','shop','store','catalog','catalogo','catalog'],
+    landing: ['landing','logistics','product','diagnostic','lead']
+  };
+
+  function tokenHasAlias(tokens, alias){
+    const escaped = String(alias).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return new RegExp(`(^|[^a-z0-9])${escaped}([^a-z0-9]|$)`, 'i').test(tokens);
+  }
+
+  function projectMatchesFilter(p, filter){
+    if(filter === 'all') return true;
+    if(filter === 'featured') return !!p.featured;
+    if(filter === 'archive') return !!p.archive;
+    const tokens = [
+      p.type, p.cat, p.art, p.label, p.status, p.tech,
+      Array.isArray(p.filters) ? p.filters.join(' ') : ''
+    ].filter(Boolean).join(' ').toLowerCase();
+    const aliases = FILTER_ALIASES[filter] || [filter];
+    return aliases.some(alias => tokenHasAlias(tokens, alias));
+  }
+
   function renderProjects(){
     const grid=$('#projGrid'); if(!grid) return;
-    const filtered = projects.filter(p => {
-      if(activeProjectFilter === 'all') return true;
-      if(activeProjectFilter === 'featured') return !!p.featured;
-      if(activeProjectFilter === 'archive') return !!p.archive;
-      return (p.type || p.cat || '').toLowerCase().includes(activeProjectFilter);
-    });
+    const filtered = projects.filter(p => projectMatchesFilter(p, activeProjectFilter));
+    if(!filtered.length){
+      const msg = lang === 'pt'
+        ? 'Nenhum arquivo nessa categoria ainda. Volte para TODOS para ver os projetos salvos.'
+        : 'No file in this category yet. Go back to ALL to see the saved projects.';
+      grid.innerHTML = `<div class="projects-empty" role="status">${msg}</div>`;
+      return;
+    }
     grid.innerHTML = filtered.map(p=>{
-      const c=p[lang];
+      const c=p[lang] || p.pt || p.en || {};
       const marker = p.featured ? 'FEATURED' : (p.archive ? 'ARCHIVE' : p.status);
-      return `<article class="proj ${p.featured?'is-featured':''} ${p.archive?'is-archive':''}" data-pid="${p.id}" tabindex="0" role="button" aria-label="${c.n}">
+      return `<article class="proj ${p.featured?'is-featured':''} ${p.archive?'is-archive':''}" data-pid="${p.id}" tabindex="0" role="button" aria-label="${c.n || p.label || p.id}">
         ${thumbMarkup(p)}
         <span class="proj-marker">${marker}</span>
-        <h3>${c.n}</h3>
-        <p>${c.d}</p>
-        <div><span class="proj-status">${p.status}</span><span class="proj-tags">${p.cat}</span></div>
-        <p class="proj-tags">${p.tech}</p>
+        <h3>${c.n || p.label || p.id}</h3>
+        <p>${c.d || ''}</p>
+        <div><span class="proj-status">${p.status || 'LIVE'}</span><span class="proj-tags">${p.cat || ''}</span></div>
+        <p class="proj-tags">${p.tech || ''}</p>
       </article>`;
     }).join('');
     grid.querySelectorAll('.proj').forEach(el=>{
@@ -361,7 +418,7 @@
   const modal=$('#projModal'), modalBody=$('#modalBody');
   function openProject(id){
     const p=projects.find(x=>x.id===id); if(!p||!modal) return;
-    const c=p[lang];
+    const c=p[lang] || p.pt || p.en || {};
     const feats = (Array.isArray(c.feat) ? c.feat : []).map(f=>`<li>${f}</li>`).join('');
     const links = `<div class="m-links">
       ${p.site && p.site!=='#' ? `<a class="btn btn-primary" href="${p.site}" target="_blank" rel="noreferrer">${t('modal.viewSite')}</a>`:''}
@@ -369,12 +426,12 @@
     </div>`;
     modalBody.innerHTML = `
       <p class="m-tag">FILE_${p.id.toUpperCase()}.dat // ${p.cat}</p>
-      <h3>${c.n}</h3>
-      <p>${c.d}</p>
-      <h4>${t('modal.objective')}</h4><p>${c.obj}</p>
+      <h3>${c.n || p.label || p.id}</h3>
+      <p>${c.d || ''}</p>
+      <h4>${t('modal.objective')}</h4><p>${c.obj || ''}</p>
       <h4>${t('modal.features')}</h4><ul>${feats}</ul>
-      <h4>${t('modal.tech')}</h4><p>${p.tech}</p>
-      <h4>${t('modal.result')}</h4><p>${c.res}</p>
+      <h4>${t('modal.tech')}</h4><p>${p.tech || ''}</p>
+      <h4>${t('modal.result')}</h4><p>${c.res || ''}</p>
       ${links}
     `;
     modal.classList.add('show'); modal.setAttribute('aria-hidden','false');

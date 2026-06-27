@@ -725,16 +725,16 @@ window.STHINXY_DEFAULT_CONTENT = {
       "cat": "PERSONAL PORTFOLIO",
       "type": "archive web portfolio",
       "art": "port",
-      "label": "STHINXY",
+      "label": "BEATRIZ",
       "site": "https://sthinxy.github.io/portfolio/",
       "repo": "https://github.com/sthinxy/portfolio",
       "tech": "HTML · CSS · JS",
       "status": "LIVE",
       "archive": true,
       "pt": {
-        "n": "STHINXY PORTFOLIO V1",
-        "d": "Primeiro portfólio autoral com estética white/black space, sistema bilíngue e modal de projetos.",
-        "obj": "Criar um portfólio que parecesse uma experiência digital, não um template.",
+        "n": "PORTFOLIO (BEATRIZ)",
+        "d": "Portfólio autoral com estética white/black space, sistema bilíngue, projetos reais e experiência interativa.",
+        "obj": "Criar um portfólio que parecesse uma experiência digital autoral, não um template.",
         "feat": [
           "Tema white/black",
           "Sistema bilíngue",
@@ -743,12 +743,12 @@ window.STHINXY_DEFAULT_CONTENT = {
           "Boot screen",
           "Responsivo"
         ],
-        "res": "Arquivo importante da evolução da identidade Sthinxy."
+        "res": "Arquivo principal da identidade Beatriz / Sthinxy."
       },
       "en": {
-        "n": "STHINXY PORTFOLIO V1",
-        "d": "First authorial portfolio with white/black space aesthetics, bilingual system and project modal.",
-        "obj": "Build a portfolio that felt like a digital experience, not a template.",
+        "n": "PORTFOLIO (BEATRIZ)",
+        "d": "Authorial portfolio with white/black space aesthetics, bilingual system, real projects and an interactive experience.",
+        "obj": "Build a portfolio that felt like an authorial digital experience, not a template.",
         "feat": [
           "White/black theme",
           "Bilingual system",
@@ -757,7 +757,7 @@ window.STHINXY_DEFAULT_CONTENT = {
           "Boot screen",
           "Responsive"
         ],
-        "res": "Important archive of Sthinxy identity evolution."
+        "res": "Main file for the Beatriz / Sthinxy identity."
       }
     },
     {
@@ -840,15 +840,15 @@ window.STHINXY_DEFAULT_CONTENT = {
     },
     {
       "id": "anna",
-      "cat": "CASE / FASHION",
-      "type": "archive brand web",
+      "cat": "FASHION / BRAND",
+      "type": "brand fashion web landing",
       "art": "fashion",
       "label": "ANNA",
-      "site": "#",
+      "site": "https://annachique.vercel.app/",
       "repo": "#",
       "tech": "HTML · CSS · JS · Responsive",
-      "status": "CASE",
-      "archive": true,
+      "status": "LIVE",
+      "featured": false,
       "pt": {
         "n": "ANNA CHIQUE",
         "d": "Case visual para boutique de moda com identidade feminina e elegante.",
@@ -874,42 +874,6 @@ window.STHINXY_DEFAULT_CONTENT = {
           "Mobile-first"
         ],
         "res": "Premium visual study for fashion."
-      }
-    },
-    {
-      "id": "diary",
-      "cat": "EXPERIMENT",
-      "type": "archive experiment",
-      "art": "diary",
-      "label": "DIÁRIO",
-      "site": "#",
-      "repo": "#",
-      "tech": "JS · LocalStorage",
-      "status": "WIP",
-      "archive": true,
-      "pt": {
-        "n": "DIÁRIO DO VAZIO",
-        "d": "Pequeno diário digital com entradas datadas e tema noturno automático.",
-        "obj": "Experimentar narrativa íntima dentro de uma interface digital.",
-        "feat": [
-          "Entradas datadas",
-          "Tema automático",
-          "LocalStorage",
-          "Estética caderno"
-        ],
-        "res": "Experimento de design narrativo."
-      },
-      "en": {
-        "n": "EMPTINESS DIARY",
-        "d": "Small digital diary with dated entries and auto night theme.",
-        "obj": "Experiment with intimate narrative inside a digital interface.",
-        "feat": [
-          "Dated entries",
-          "Auto theme",
-          "LocalStorage",
-          "Notebook aesthetic"
-        ],
-        "res": "Narrative design experiment."
       }
     }
   ],
@@ -995,6 +959,12 @@ window.STHINXY_DEFAULT_CONTENT = {
         "label": "INSTAGRAM",
         "text": "@noirdescent",
         "url": "https://www.instagram.com/noirdescent/"
+      },
+      {
+        "icon": "◌",
+        "label": "DISCORD",
+        "text": "sthinxy",
+        "url": "https://discord.com/users/832411401649258497"
       }
     ],
     "mobileDock": [

@@ -391,7 +391,8 @@ body{ cursor: none; }
 .contact-e-mail   .cc-ico::after,
 .contact-behance  .cc-ico::after,
 .contact-github   .cc-ico::after,
-.contact-instagram .cc-ico::after{
+.contact-instagram .cc-ico::after,
+.contact-discord .cc-ico::after{
   content: "" !important;
   position: absolute !important;
   right: -6px !important; bottom: -2px !important;
@@ -461,4 +462,294 @@ body{ cursor: none; }
   #snakeCanvas{ display:none; }
   .name-gate .name-box::after{ animation:none !important; }
   body{ cursor:auto; }
+}
+
+/* ---------- final fixes: project gallery, Discord icon, footer tag ---------- */
+.proj-grid{
+  grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 360px)) !important;
+  justify-content: start;
+  align-items: stretch;
+}
+.proj{
+  width: 100%;
+  max-width: 360px;
+}
+.projects-empty{
+  grid-column: 1 / -1;
+  border: 1px dashed var(--gate-ink);
+  background: color-mix(in srgb, var(--gate-paper) 92%, var(--gate-ink));
+  color: var(--gate-muted);
+  font-family: 'Special Elite', monospace;
+  font-size: clamp(16px, 2vw, 21px);
+  line-height: 1.5;
+  padding: 22px;
+}
+.contact-discord .cc-ico svg path:first-child{
+  fill: currentColor !important;
+  stroke: none !important;
+}
+.gate-bottom-label{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px 5px;
+  border: 1px solid color-mix(in srgb, var(--gate-ink) 45%, transparent);
+  background: color-mix(in srgb, var(--gate-paper) 86%, transparent);
+  backdrop-filter: blur(4px);
+  letter-spacing: 3px;
+}
+.gate-bottom-label .gb-bracket{
+  margin: 0;
+  opacity: .72;
+}
+.gate-bottom-label .gb-dot{
+  width: 6px;
+  height: 6px;
+  margin: 0 10px !important;
+  box-shadow: 0 0 0 1px var(--gate-paper), 0 0 10px color-mix(in srgb, var(--gate-red) 55%, transparent);
+}
+
+@media (max-width: 760px){
+  .proj-grid{
+    grid-template-columns: 1fr !important;
+  }
+  .proj{
+    max-width: none;
+  }
+}
+
+.foot{
+  background: color-mix(in srgb, var(--gate-paper) 96%, var(--gate-ink)) !important;
+  border-top: 1px solid var(--gate-ink) !important;
+}
+.foot::before{
+  height: 1px !important;
+  opacity: .42;
+  animation: none !important;
+}
+.foot p:first-child{
+  color: var(--gate-ink) !important;
+  text-shadow: none !important;
+  animation: none !important;
+}
+.foot p:first-child::after{
+  content: "" !important;
+}
+.foot .muted{
+  animation: none !important;
+}
+
+/* ---------- Bia final pass ---------- */
+.gate-bottom-label{
+  display: none !important;
+}
+
+@media (hover:hover) and (pointer:fine){
+  html, body, body *{
+    cursor: none !important;
+  }
+}
+
+.services-grid{
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+}
+.service-card{
+  min-height: 210px;
+  padding: 24px 20px 22px !important;
+  border: 2px solid var(--gate-ink) !important;
+  background:
+    repeating-linear-gradient(0deg, color-mix(in srgb, var(--gate-paper) 96%, transparent) 0 3px, color-mix(in srgb, var(--gate-ink) 5%, var(--gate-paper)) 3px 4px),
+    var(--gate-paper) !important;
+  color: var(--gate-ink) !important;
+  box-shadow: 4px 4px 0 var(--gate-ink) !important;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  contain: layout paint;
+}
+.service-card::before{
+  display: none !important;
+}
+.service-card::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--gate-red) 10%, transparent), transparent);
+  transform: translateX(-130%) skewX(-14deg);
+  opacity: 0;
+}
+.service-card:hover::after{
+  animation: serviceCardScan .7s steps(6,end) both;
+}
+.service-card:hover{
+  transform: translate(-3px,-3px) !important;
+  box-shadow: 7px 7px 0 var(--gate-ink) !important;
+  border-color: var(--gate-ink) !important;
+}
+.service-tag{
+  color: var(--gate-muted) !important;
+  font-size: 9px !important;
+  letter-spacing: 3px !important;
+  margin: 0 0 4px !important;
+}
+.service-name{
+  color: var(--gate-ink) !important;
+  font-size: clamp(15px, 1.25vw, 20px) !important;
+  letter-spacing: 3px !important;
+  line-height: 1.25 !important;
+  margin: 0 !important;
+  max-width: 86%;
+}
+.service-desc{
+  color: color-mix(in srgb, var(--gate-ink) 68%, transparent) !important;
+  font-size: 18px !important;
+  line-height: 1.45 !important;
+  margin: 0 !important;
+}
+.service-ico{
+  position: absolute !important;
+  top: 22px;
+  right: 22px;
+  float: none !important;
+  color: var(--gate-ink) !important;
+  font-size: 18px !important;
+  line-height: 1;
+  opacity: .82;
+  animation: serviceIconWake 2.6s steps(4,end) infinite;
+}
+.service-card:hover .service-ico{
+  color: var(--gate-red) !important;
+  animation-duration: .55s;
+}
+@keyframes serviceCardScan{
+  0%{ opacity: .35; transform: translateX(-130%) skewX(-14deg); }
+  100%{ opacity: 0; transform: translateX(130%) skewX(-14deg); }
+}
+@keyframes serviceIconWake{
+  50%{ transform: translate(2px,-2px) rotate(8deg); opacity: 1; }
+}
+
+.hero-status{
+  position: relative;
+  width: fit-content;
+  padding: 6px 10px 7px;
+  overflow: hidden;
+  animation: statusReadoutDrift 3.8s steps(6,end) infinite;
+}
+.hero-status::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gate-red), transparent);
+  transform-origin: left;
+  animation: statusReadoutLine 1.8s steps(7,end) infinite;
+}
+.hero-status::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--gate-red) 12%, transparent), transparent);
+  transform: translateX(-120%);
+  animation: statusReadoutScan 2.9s steps(8,end) infinite;
+}
+.hero-status .status-dot{
+  box-shadow: 0 0 0 0 rgba(50, 190, 82, .45), 0 0 10px rgba(50, 190, 82, .7);
+  animation: statusDotHardPulse 1.15s steps(3,end) infinite;
+}
+.hero-status em{
+  color: var(--gate-ink);
+  text-shadow: 1px 0 0 color-mix(in srgb, var(--gate-red) 28%, transparent);
+}
+@keyframes statusReadoutDrift{
+  50%{ transform: translateX(2px); }
+}
+@keyframes statusReadoutLine{
+  0%{ transform: scaleX(.08); opacity: .8; }
+  70%,100%{ transform: scaleX(1); opacity: .18; }
+}
+@keyframes statusReadoutScan{
+  35%{ transform: translateX(120%); }
+  36%,100%{ transform: translateX(120%); }
+}
+@keyframes statusDotHardPulse{
+  50%{ transform: scale(1.45); box-shadow: 0 0 0 7px rgba(50, 190, 82, 0), 0 0 14px rgba(50, 190, 82, .9); }
+}
+
+.foot{
+  position: relative;
+  overflow: hidden;
+  background:
+    repeating-linear-gradient(0deg, color-mix(in srgb, var(--gate-paper) 96%, transparent) 0 3px, color-mix(in srgb, var(--gate-ink) 5%, transparent) 3px 4px),
+    var(--gate-paper) !important;
+}
+.foot::before{
+  height: 1px !important;
+  opacity: .55 !important;
+  animation: footSealLoad 2.4s steps(8,end) infinite !important;
+}
+.foot::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--gate-red) 10%, transparent), transparent);
+  transform: translateX(-120%);
+  animation: footSoftScan 4.2s steps(10,end) infinite;
+}
+.foot p:first-child{
+  font-family: var(--font-display);
+  letter-spacing: 4px;
+  animation: footTitleGlitch 2.6s steps(3,end) infinite !important;
+}
+.foot .muted{
+  animation: footHintFlicker 3.3s steps(5,end) infinite !important;
+}
+@keyframes footSealLoad{
+  0%{ clip-path: inset(0 100% 0 0); opacity: .7; }
+  70%,100%{ clip-path: inset(0 0 0 0); opacity: .2; }
+}
+@keyframes footSoftScan{
+  38%{ transform: translateX(120%); }
+  39%,100%{ transform: translateX(120%); }
+}
+@keyframes footTitleGlitch{
+  0%,88%,100%{ transform: translateX(0); text-shadow: none; }
+  91%{ transform: translateX(-2px); text-shadow: 2px 0 0 var(--gate-red); }
+  94%{ transform: translateX(2px); text-shadow: -2px 0 0 var(--gate-muted); }
+}
+@keyframes footHintFlicker{
+  50%{ opacity: .72; transform: translateX(2px); }
+}
+
+.section, .service-card, .proj, .contact-card, .skill, .about-card{
+  contain: layout paint;
+}
+.nav-links a,.btn,.service-card,.proj,.about-card,.skill,.contact-card,.cta-box,.save-card,.open-channel input,.open-channel textarea{
+  will-change: auto !important;
+}
+
+@media (max-width: 1120px){
+  .services-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 640px){
+  .services-grid{
+    grid-template-columns: 1fr !important;
+  }
+  .service-card{
+    min-height: 190px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .service-card::after,.service-ico,.hero-status,.hero-status::before,.hero-status::after,.hero-status .status-dot,.foot::before,.foot::after,.foot p:first-child,.foot .muted{
+    animation: none !important;
+  }
 }

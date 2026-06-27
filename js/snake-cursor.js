@@ -39,12 +39,17 @@
   var target = { x: innerWidth/2, y: innerHeight/2 };
   var lastMoveTs = performance.now() - 3000;
   var pointerActive = false;
+  var wasIdle = false;
+  var idleAnchor = { x: target.x, y: target.y };
 
   function setTarget(x, y){
     target.x = Math.max(12, Math.min(innerWidth - 12, x));
     target.y = Math.max(12, Math.min(innerHeight - 12, y));
     lastMoveTs = performance.now();
     pointerActive = true;
+    wasIdle = false;
+    idleAnchor.x = target.x;
+    idleAnchor.y = target.y;
   }
 
   addEventListener('mousemove', function(e){
@@ -72,11 +77,11 @@
   }
 
   var prey = { x: innerWidth*0.72, y: innerHeight*0.42, vx: 0, vy: 0 };
-  var preySize = coarse ? 7 : 6;
-  var PREY_FLEE_DIST = coarse ? 155 : 190;
-  var PREY_FORCE = coarse ? 1.45 : 1.9;
-  var PREY_MAX_SPEED = coarse ? 4.2 : 5.8;
-  var CAPTURE_DIST = coarse ? 15 : 12;
+  var preySize = coarse ? 5 : 4;
+  var PREY_FLEE_DIST = coarse ? 230 : 340;
+  var PREY_FORCE = coarse ? 2.75 : 4.25;
+  var PREY_MAX_SPEED = coarse ? 6.8 : 10.8;
+  var CAPTURE_DIST = coarse ? 9 : 4.5;
   var preyCaught = false;
   var paused = false;
 
@@ -95,12 +100,19 @@
 
     var idle = (ts - lastMoveTs) > (coarse ? 700 : 1800);
     if (idle){
+      if (!wasIdle){
+        idleAnchor.x = head.x;
+        idleAnchor.y = head.y;
+        wasIdle = true;
+      }
       var t = ts * 0.001;
-      var cx = coarse ? innerWidth * 0.52 : innerWidth/2;
-      var cy = coarse ? innerHeight * 0.72 : innerHeight/2;
-      var a = Math.min(innerWidth, innerHeight) * (coarse ? 0.11 : 0.18);
+      var cx = idleAnchor.x;
+      var cy = idleAnchor.y;
+      var a = Math.min(innerWidth, innerHeight) * (coarse ? 0.09 : 0.13);
       target.x = cx + a * Math.sin(t * 0.9);
       target.y = cy + a * Math.sin(t * 1.8) * 0.55;
+      target.x = Math.max(18, Math.min(innerWidth - 18, target.x));
+      target.y = Math.max(18, Math.min(innerHeight - 18, target.y));
     }
 
     var dx = target.x - head.x;
@@ -150,15 +162,15 @@
 
     if (pd < PREY_FLEE_DIST){
       var force = (PREY_FLEE_DIST - pd) / PREY_FLEE_DIST;
-      var panic = pd < PREY_FLEE_DIST * 0.42 ? 1.35 : 1;
+      var panic = pd < PREY_FLEE_DIST * 0.52 ? 2.05 : 1;
       prey.vx += (pdx / (pd||1)) * force * PREY_FORCE * panic;
       prey.vy += (pdy / (pd||1)) * force * PREY_FORCE * panic;
     }
 
-    prey.vx += Math.sin(ts*0.0011) * 0.07;
-    prey.vy += Math.cos(ts*0.0013) * 0.07;
-    prey.vx *= 0.93;
-    prey.vy *= 0.93;
+    prey.vx += Math.sin(ts*0.0011) * 0.12;
+    prey.vy += Math.cos(ts*0.0013) * 0.12;
+    prey.vx *= 0.982;
+    prey.vy *= 0.982;
 
     var speed = Math.hypot(prey.vx, prey.vy);
     if (speed > PREY_MAX_SPEED){
@@ -169,11 +181,11 @@
     prey.x += prey.vx;
     prey.y += prey.vy;
 
-    var m = coarse ? 30 : 42;
-    if (prey.x < m){ prey.x = m; prey.vx = Math.abs(prey.vx) * 0.72; }
-    if (prey.x > innerWidth - m){ prey.x = innerWidth - m; prey.vx = -Math.abs(prey.vx) * 0.72; }
-    if (prey.y < m){ prey.y = m; prey.vy = Math.abs(prey.vy) * 0.72; }
-    if (prey.y > innerHeight - m){ prey.y = innerHeight - m; prey.vy = -Math.abs(prey.vy) * 0.72; }
+    var m = coarse ? 28 : 34;
+    if (prey.x < m){ prey.x = m; prey.vx = Math.abs(prey.vx) * 0.92; }
+    if (prey.x > innerWidth - m){ prey.x = innerWidth - m; prey.vx = -Math.abs(prey.vx) * 0.92; }
+    if (prey.y < m){ prey.y = m; prey.vy = Math.abs(prey.vy) * 0.92; }
+    if (prey.y > innerHeight - m){ prey.y = innerHeight - m; prey.vy = -Math.abs(prey.vy) * 0.92; }
   }
 
   function drawSeg(x, y, sz, ink, paper, isHead){
